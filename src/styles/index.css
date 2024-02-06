@@ -1,0 +1,50 @@
+:root {
+  --color-netural: #F5F4F4;
+  --color-netural40: rgba(245, 244, 244, 0.4);
+  --color-black: #545454;
+  --color-input: #707070;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  padding: 0;
+  min-width: 1280px;
+  height: 100%;
+  overflow: scroll;
+  box-sizing: border-box;
+  background-image: url(../../public/background.jpg);
+  background-size: cover;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  font-family: 'Raleway', sans-serif;
+}
+
+.back-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 112px 472px auto;
+  grid-template-areas: 'header' 'main';
+  height: calc(100vh - 64px);
+  backdrop-filter: blur(20px);
+}
+
+.container {
+  padding: 32px;
+  display: grid;
+  align-items: center;
+  gap: 16px;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-height: 924px) {
+  .back-container {
+    height: 860px;
+  }
+}
