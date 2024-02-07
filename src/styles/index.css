@@ -1,8 +1,14 @@
+@import "header.css";
+@import "weather.css";
+
 :root {
-  --color-netural: #F5F4F4;
+  --color-neturalF5: #F5F4F4;
+  --color-neturalDA: #DADADA;
   --color-netural40: rgba(245, 244, 244, 0.4);
   --color-black: #545454;
   --color-input: #707070;
+  --color-input-black: #202020;
+  --color-netural10: rgba(112, 112, 112, 0.1);
 }
 
 body {
@@ -13,12 +19,12 @@ body {
   padding: 0;
   min-width: 1280px;
   height: 100%;
-  overflow: scroll;
   box-sizing: border-box;
   background-image: url(../../public/background.jpg);
   background-size: cover;
   background-position: 0 50%;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -28,7 +34,9 @@ body {
   grid-template-rows: 112px 472px auto;
   grid-template-areas: 'header' 'main';
   height: calc(100vh - 64px);
-  backdrop-filter: blur(20px);
+  border-radius: 8px;
+  backdrop-filter: blur(25px);
+  background-color: var(--color-netural10);
 }
 
 .container {
@@ -41,6 +49,20 @@ body {
 .main {
   height: 100%;
   width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 @media (max-height: 924px) {

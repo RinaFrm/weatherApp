@@ -11,7 +11,7 @@
   text-align: center;
   align-items: center;
   padding: 8px;
-  color: var(--color-netural);
+  color: var(--color-neturalF5);
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -19,14 +19,26 @@
 
 .weather__forecast-city {
   font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .weather__forecast-degree {
+  position: relative;
   margin-top: 56px;
   margin-bottom: 56px;
   font-weight: 700;
   font-size: 112px;
   line-height: 112px;
+}
+
+.weather__forecast-degree span {
+  position: absolute;
+  top: 14px;
+}
+
+.weather__forecast-degree-minus {
+  left: 20px;
 }
 
 .weather__forecast-state {
@@ -35,7 +47,7 @@
   justify-content: center;
 }
 
-.weather__forecast-state svg {
+.weather__forecast-state img {
   width: 24px;
   height: 24px;
   margin-right: 8px;
