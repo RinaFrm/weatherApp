@@ -29,7 +29,7 @@
   font-size: 20px;
   line-height: 24px;
   background-color: var(--color-netural40);
-  color: var(--color-input-black);
+  color: var(--color-black20);
   transition: all .5s ease;
 }
 

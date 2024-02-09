@@ -4,11 +4,17 @@
 :root {
   --color-neturalF5: #F5F4F4;
   --color-neturalDA: #DADADA;
+  --color-neturalDA40: rgba(218, 218, 218, 0.4);
   --color-netural40: rgba(245, 244, 244, 0.4);
-  --color-black: #545454;
+  --color-netural39: #393939;
+  --color-black54: #545454;
   --color-input: #707070;
-  --color-input-black: #202020;
+  --color-black20: #202020;
   --color-netural10: rgba(112, 112, 112, 0.1);
+}
+
+h1, h1, h3 {
+  margin: 0;
 }
 
 body {
@@ -26,6 +32,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: 'Raleway', sans-serif;
+  font-variant-numeric: lining-nums;
 }
 
 .back-container {
