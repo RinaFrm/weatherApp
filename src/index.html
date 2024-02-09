@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <div class="back-container">
     <header class="header">
@@ -17,12 +19,8 @@
           <img src="./img/svg/logo.svg" alt="Логотип">
         </a>
         <form class="header__search">
-          <input 
-            type="text" 
-            class="header__search-input" 
-            placeholder="Поиск по городу">
-          <button class="header__search-btn" type="submit">
-            <!-- <img src="./img/svg/search.svg" alt="иконка поиска"> -->
+          <input type="text" class="header__search-input" placeholder="Поиск по городу">
+          <button class="header__search-btn" type="button">
           </button>
         </form>
       </div>
@@ -42,10 +40,10 @@
               11:29
             </span>
             <span class="weather__forecast-degree">
-              <span class="weather__forecast-degree-minus">-</span>7<span>°</span>
+              -7°
             </span>
             <span class="weather__forecast-state">
-              <img src="./img/svg/cloud.svg" alt="сконка облака">
+              <img src="./img/svg/cloud.svg" alt="Иконка облака">
               Облачно
             </span>
             <span class="weather__feelslike">
@@ -53,19 +51,68 @@
             </span>
           </div>
           <div class="weather__cards">
-            <ul class="weather__cards-list">
-              <li class="weather__cards-list-li"></li>
-              <li class="weather__cards-list-li"></li>
-              <li class="weather__cards-list-li"></li>
-              <li class="weather__cards-list-li"></li>
-              <li class="weather__cards-list-li"></li>
-              <li class="weather__cards-list-li"></li>
+            <ul class="weather__cards-list" id="weatherList">
             </ul>
           </div>
         </div>
       </section>
+      <section class="slider">
+        <div class="container slider__container">
+          <div class="slider__top">
+            <h2 class="slider__top-title">
+              Прозноз:
+            </h2>
+            <button class="slider__top-tab tab active" data-tab="1">
+              на 24 часа
+            </button>
+            <button class="slider__top-tab tab" data-tab="2">
+              на 5 дней
+            </button>
+          </div>
+          <div class="slider__bottom">
+            <div class="bottom-forecast tab-content active" id="hourForecast" data-tab="1">
+              <button class="bottom-btn prev">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 3L7 12L16 21" stroke="#545454" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <ul class="bottom-forecast-list hour-forecast"></ul>
+              <button class="bottom-btn next active">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 3L7 12L16 21" stroke="#545454" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="bottom-forecast tab-content" id="dayForecast" data-tab="2">
+              <button class="bottom-btn prev">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 3L7 12L16 21" stroke="#545454" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <ul class="bottom-forecast-list day-forecast"></ul>
+              <button class="bottom-btn next active">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 3L7 12L16 21" stroke="#545454" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <p class="footer__text">
+        Проект выполнен в рамках стажировки
+        <a class="footer__link" href="https://preax.ru" target="_blank">
+          PREAX</a>
+      </p>
+    </footer>
   </div>
-  <script src="./script/index.js"></script>
+  <script src="./script/index.js" type="module"></script>
 </body>
+
 </html>

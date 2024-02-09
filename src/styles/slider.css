@@ -1,0 +1,118 @@
+.slider {
+  grid-area: slider;
+}
+
+.slider__container {
+  gap: 32px !important;
+  width: calc(1120px - 64px);
+}
+
+.slider__top {
+  display: grid;
+  gap: 32px;
+  justify-content: flex-start;
+  grid-auto-flow: column;
+  height: 32px;
+}
+
+.slider__top-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--color-neturalF5);
+}
+
+.slider__top-tab {
+  cursor: pointer;
+  padding: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--color-neturalA6);
+  font-variant-numeric: lining-nums;
+  background-color: transparent;
+  transition: all .5s ease;
+}
+
+.slider__top-tab:hover {
+  border-bottom: 2px solid var(--color-neturalA6);
+}
+
+.slider__top-tab.active {
+  cursor: auto;
+  color: var(--color-neturalF5);
+  border-bottom: 2px solid var(--color-neturalF5);
+}
+
+.bottom-forecast.active {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 32px;
+  align-items: center;
+}
+
+.bottom-forecast {
+  display: none;
+}
+
+.bottom-forecast-list {
+  display: grid;
+  gap: 16px;
+  grid-auto-flow: column;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, #000 97%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, #000 97%, transparent 100%);
+}
+
+.forecast-card {
+  display: grid;
+  gap: 16px;
+  grid-auto-flow: column;
+  padding: 16px;
+  list-style: none;
+  align-items: center;
+  height: calc(64px - 32px);
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-black20);
+  background-color: var(--color-netural40);
+}
+
+.hour-card {
+  width: calc(156px - 32px);
+}
+
+.day-card {
+  width: calc(275px - 32px);
+}
+
+.bottom-btn {
+  cursor: pointer;
+  border: none;
+  width: 56px;
+  height: 48px;
+  opacity: 50%;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: var(--color-netural40);
+  pointer-events: none;
+  transition: all .5s ease;
+}
+
+.bottom-btn.next svg {
+  transform: rotate(180deg);
+}
+
+.bottom-btn.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.bottom-btn:hover {
+  background-color: var(--color-neturalDA);
+}

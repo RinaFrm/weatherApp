@@ -1,0 +1,18 @@
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-neturalF5);
+}
+
+.footer__link {
+  cursor: pointer;
+  color: var(--color-neturalF5);
+}
