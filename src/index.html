@@ -16,7 +16,10 @@
     <header class="header">
       <div class="header__container container">
         <a href="#" class="header__logo">
-          <img src="./img/svg/logo.svg" alt="Логотип">
+          <picture>
+            <source media="(max-width: 1023px)" srcset="./img/svg/logoTablet.svg">
+            <img src="./img/svg/logo.svg" alt="Логотип">
+          </picture>
         </a>
         <form class="header__search">
           <input type="text" class="header__search-input" placeholder="Поиск по городу">
@@ -60,14 +63,16 @@
         <div class="container slider__container">
           <div class="slider__top">
             <h2 class="slider__top-title">
-              Прозноз:
+              Прогноз:
             </h2>
-            <button class="slider__top-tab tab active" data-tab="1">
-              на 24 часа
-            </button>
-            <button class="slider__top-tab tab" data-tab="2">
-              на 5 дней
-            </button>
+            <div class="slider__top-tabs">
+              <button class="slider__top-tab tab active" data-tab="1">
+                на 24 часа
+              </button>
+              <button class="slider__top-tab tab" data-tab="2">
+                на 5 дней
+              </button>
+            </div>
           </div>
           <div class="slider__bottom">
             <div class="bottom-forecast tab-content active" id="hourForecast" data-tab="1">
@@ -105,11 +110,13 @@
       </section>
     </main>
     <footer class="footer">
-      <p class="footer__text">
-        Проект выполнен в рамках стажировки
-        <a class="footer__link" href="https://preax.ru" target="_blank">
-          PREAX</a>
-      </p>
+      <div class="container">
+        <p class="footer__text">
+          Проект выполнен в рамках стажировки
+          <a class="footer__link" href="https://preax.ru" target="_blank">
+            PREAX</a>
+        </p>
+      </div>
     </footer>
   </div>
   <script src="./script/index.js" type="module"></script>
